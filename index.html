@@ -7,9 +7,12 @@ title: Home
 <div class="docs-section" id="about">
   <h4>About</h4>
   <p>
-    I am Inho Jung, and this is my academic homepage.
-    This website will highlight my research, publications, and academic background.
-    You can reach me at <a href="mailto:{{ site.data.main_info.email }}">{{ site.data.main_info.email }}</a>.
+    I am a Ph.D. student at the
+    <a class="about-link" href="https://tail.korea.ac.kr/" target="_blank" rel="noopener noreferrer">Trustworthy AI Lab</a>,
+    advised by
+    <a class="about-link" href="https://jh-jeong.github.io/" target="_blank" rel="noopener noreferrer">Prof. Jongheon Jeong</a>
+    at Korea University. My research interests are in AI security, with a particular focus on AI-generated content detection.
+    I aim to study both known and emerging security challenges in widely used foundation models and contribute to making them safer and more trustworthy in practice.
   </p>
 </div>
 
@@ -24,7 +27,7 @@ title: Home
     <div class="tab-content">
       <div class="tab-pane active">
         {% for paper in site.data.publications.papers %}
-          <div class="paper">
+          <div class="paper publication-card">
             <div class="row">
               {% if paper.thumbnail %}
                 <div class="four columns">
@@ -83,12 +86,16 @@ title: Home
   <h4>Education</h4>
   {% if site.data.education.educations and site.data.education.educations.size > 0 %}
     {% for edu in site.data.education.educations %}
-      <div class="paper">
-        <p class="title">
-          <b>{{ edu.place }}</b>
-          <b style="float:right;">{{ edu.time }}</b>
-        </p>
-        <p>{{ edu.title }}</p>
+      <div class="paper publication-card education-card">
+        <div class="education-row">
+          <div class="education-icon" aria-hidden="true">
+            <i class="fa fa-graduation-cap"></i>
+          </div>
+          <div class="education-body">
+            <p class="title"><b>{{ edu.title }}</b></p>
+            <p class="education-meta">{{ edu.place }} <span class="education-time">({{ edu.time }})</span></p>
+          </div>
+        </div>
       </div>
     {% endfor %}
   {% else %}

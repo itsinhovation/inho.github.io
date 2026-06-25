@@ -1,5 +1,15 @@
 educations:
-  # - place: "Korea University"
-  #   time: "Mar. 2025 - Present"
-  #   title: "M.S. Student in ..."
-  #   category: "school"
+  - place: "Korea University"
+    time: "2026 - Present"
+    title: "Ph.D. in Artificial Intelligence"
+    category: "school"
+
+  - place: "Sungkyunkwan University"
+    time: "2023 - 2025"
+    title: "M.S. in Computer Science and Engineering"
+    category: "school"
+
+  - place: "The University of Suwon"
+    time: "2017 - 2023"
+    title: "B.S. in Data Science"
+    category: "school"
